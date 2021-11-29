@@ -4,6 +4,13 @@ Note: Breaking changes between versions are indicated by "💥".
 
 ## Unreleased
 
+- [Feature] Better support of Caddy as a load balancer in Kubernetes:
+  - Make it possible to start/stop a selection of resources with ``tutor k8s start/stop [names...]``.
+  - Make it easy to deploy an independent LoadBalancer by converting the caddy service to a ClusterIP when ``ENABLE_WEB_PROXY=false``.
+  - Add a ``app.kubernetes.io/component: loadbalancer`` label to the LoadBalancer service.
+  - Add ``app.kubernetes.io/name`` labels to all services.
+  - Preserve the LoadBalancer service in ``tutor k8s stop`` commands.
+  - Wait for the caddy deployment to be ready before running initialisation jobs.
 - [Security] On Kubernetes, convert all NodePort services to ClusterIP to guarantee network isolation from outside the cluster.
 - [Bugfix] Remove trailing slashes in docker-compose files for [compatibility with docker-compose v2 in WSL](https://github.com/docker/compose/issues/8558).
 - [Improvement] `settheme` now works with preview domain.
