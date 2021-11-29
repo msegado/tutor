@@ -3,6 +3,8 @@
 Note: Breaking changes between versions are indicated by "💥".
 
 ## Unreleased
+
+- [Security] On Kubernetes, convert all NodePort services to ClusterIP to guarantee network isolation from outside the cluster.
 - [Bugfix] Remove trailing slashes in docker-compose files for [compatibility with docker-compose v2 in WSL](https://github.com/docker/compose/issues/8558).
 - [Improvement] `settheme` now works with preview domain.
 
