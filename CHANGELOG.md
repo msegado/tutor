@@ -3,6 +3,7 @@
 Note: Breaking changes between versions are indicated by "💥".
 
 ## Unreleased
+- [Bugfix] Fix building of the `openedx` image on ARM64 due to missing `libgeos-dev`
 - [Bugfix] Remove trailing slashes in docker-compose files for [compatibility with docker-compose v2 in WSL](https://github.com/docker/compose/issues/8558).
 
 ## v12.1.7 (2021-11-18)
